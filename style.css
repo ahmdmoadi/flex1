@@ -1,0 +1,196 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    font-family: "Segoe UI";
+}
+.cont {
+    height: 100vh;
+    overflow: hidden;
+}
+nav {
+    /* border: 3px solid aqua; */
+    margin: 40px;
+}
+.flex-cont {
+    /* border: 4px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    /* border: 3px solid blue; */
+    justify-self: flex-start;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: Magneto;
+    background-image: linear-gradient(to right,rgb(255, 122, 122),rgb(255, 209, 83),#aaffad);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.flex-nav {
+    /* border: 3px solid orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-nav ul {
+    /* border: 3px solid lime; */
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 500px;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: bold;
+}
+.flex-nav ul li:nth-child(2n) {
+    /* border: 3px solid cyan; */
+}
+.flex-nav ul li:nth-child(2n-1) {
+    /* border: 3px solid magenta; */
+}
+.flex-nav ul li a {
+    color: white;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+.flex-nav ul li a:hover,
+.flex-nav ul li a:active {
+    color: rgb(198, 198, 198);
+}
+a.center-card {
+    border: 4px solid rgb(217, 217, 217);
+    display: inline-block;
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(215, 215, 215);
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    box-shadow: 5px 5px 10px 1px rgb(255, 171, 60);
+    transition: all .25s;
+    /* x y spread size color*/
+}
+a.center-card:visited {
+    color: black;
+}
+a.center-card:hover {
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.296);
+    top: 51%;
+    left: 51%;
+}
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    height: 100vh;
+    overflow: hidden;
+}
+.cover {
+    height: 100vh;
+    width: 100%;
+}
+#bottom {
+    height: 1000px;
+}
+.card {
+    width: 360px;
+    height: 210px;
+    padding: 40px;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin: 100px auto;
+}
+#menuToggle {
+    display: none;
+}
+input#meow {
+    display: none;
+}
+@media (max-width: 779px) {
+    a.center-card {
+        display: none;
+    }
+    .flex-nav,.flex-nav ul {
+        display: block;
+    }
+    #menuToggle.show {
+        color: black;
+    }
+    nav.show {
+        margin: 0;
+        background-color: white;
+        height: 100vh;
+    }
+    .flex-cont {
+        flex-direction: column;
+        height: 320px;
+    }
+    .flex-cont.show {
+        padding-top: 40px;
+        align-items: center;
+    }
+    .flex-cont ul {
+        display: none;
+    }
+    .flex-cont ul.show {
+        display: block;
+    }
+    .flex-nav ul {
+        min-width: 100vw;
+    }
+    .flex-nav ul li {
+        padding:10px 0 ;
+    }
+    .flex-nav ul li:nth-child(2n) {
+        background: #fff;
+    }
+    .flex-nav ul li:nth-child(2n-1) {
+        background: lightgray;
+        border-radius: 5px;
+    }
+    .flex-cont ul.show li a {
+        color: black;
+    }
+    .flex-nav {
+        /* background: white; */
+    }
+    #menuToggle {
+        display: inline-block;
+        position: absolute;
+        top: 45px;
+        right: 50px;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+@media (max-width: 441px) {
+    /* .cover {
+        width: 100%;
+        height: 100vh;
+    }
+    .cover img {
+        width: 100%;
+    } */
+}
